@@ -75,6 +75,32 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+	
+	# Custom aliases
+	addall = !git add . && git rmall
+	rz   = reset
+    	rzh  = !git reset HEAD@{\"$@\"} && :
+    	wip  = !git add . && git ci -m 'WIP'
+    	wipa = !git wip --amend --no-edit
+    	co = checkout
+    	ci = commit
+    	st = status -s
+    	ft = fetch
+    	rb = rebase
+    	rbi = rebase -i
+    	rbc = rebase --continue
+    	rba = rebase --abort
+    	ai = add -p
+    	br = branch
+    	ls = ls-files
+    	pub = push -u origin HEAD
+    	fix = commit --no-edit --amend
+    	coi = checkout -p
+    	rmall = !git status -s | grep '^ D' | cut -c4- | xargs git rm
+    	check-syntax = !git st | grep -E 'php$' | grep -v '^ D' | cut -c4- | xargs -n 1 php -l
+    	cs = !git check-syntax
+    	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+    	dm = !sh -c 'git diff $@ | subl'
 
 [apply]
 
@@ -125,6 +151,9 @@
 	changed = green
 	untracked = cyan
 
+[credential]
+    helper = osxkeychain
+
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
@@ -152,7 +181,7 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
-
+	tool = opendiff
 [push]
 
 	# Use the Git 1.x.x default to avoid errors on machines with old Git
@@ -161,6 +190,9 @@
 	default = matching
 	# Make `git push` push relevant annotated tags when pushing branches out.
 	followTags = true
+
+[rerere]
+    enabled = 1
 
 # URL shorthands
 
