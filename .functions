@@ -234,3 +234,8 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+#generate a random password of given length
+function randpass() {
+    /usr/bin/python -c "import string, random; print ''.join(random.SystemRandom().choice(string.ascii_letters + string.digits) for _ in range(int('$@')))"
+}
