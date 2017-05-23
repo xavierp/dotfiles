@@ -84,7 +84,9 @@ brew install dark-mode
 #brew install exiv2
 brew install git
 brew install git-lfs
+brew install gpg
 brew install imagemagick --with-webp
+brew install gnuplot
 brew install jq
 brew install lynx
 brew install p7zip
@@ -98,6 +100,34 @@ brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
+
+
+# Setup brew cask
+brew tap caskroom/cask
+brew tap caskroom/fonts
+
+# Web browsers
+brew cask install google-chrome
+brew cask install firefox
+brew cask install opera
+
+# Dev tools
+brew cask install iterm2
+brew cask install sublime-text
+brew cask install tunnelblick
+brew cask install docker
+
+# Other cool apps
+brew cask install spotify
+brew cask install skype
+brew cask install discord
+brew cask install battle-net
+brew cask install transmission
+brew cask install microsoft-office
+
+
+# Fonts
+brew cask install font-menlo-for-powerline
 
 # Remove outdated versions from the cellar.
 brew cleanup
