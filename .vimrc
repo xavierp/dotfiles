@@ -104,3 +104,30 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+
+" Plugins
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" Custom Bundles
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'mattn/emmet-vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/nerdcommenter'
+" Bundle 'Lokaltog/vim-easymotion'
+Bundle 'vim-scripts/restore_view.vim'
+BUndle 'ekalinin/Dockerfile.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'valloric/youcompleteme'
+Bundle 'powerline/powerline'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
