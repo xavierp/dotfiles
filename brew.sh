@@ -131,3 +131,9 @@ brew cask install font-menlo-for-powerline
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# Install extra things
+
+
+# install Vim Plugins
+vim +PluginInstall +qall
