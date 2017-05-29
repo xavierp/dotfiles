@@ -1,3 +1,32 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Custom Bundles
+Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdcommenter'
+" Plugin 'Lokaltog/vim-easymotion'
+Plugin 'vim-scripts/restore_view.vim'
+Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'valloric/youcompleteme'
+Plugin 'powerline/powerline'
+
+
+"All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
 " Use the Solarized Dark theme
 set background=dark
 colorscheme solarized
@@ -104,30 +133,4 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
-
-
-" Plugins
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" Custom Bundles
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'mattn/emmet-vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/nerdcommenter'
-" Bundle 'Lokaltog/vim-easymotion'
-Bundle 'vim-scripts/restore_view.vim'
-BUndle 'ekalinin/Dockerfile.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'valloric/youcompleteme'
-Bundle 'powerline/powerline'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
 
