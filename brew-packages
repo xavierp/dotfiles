@@ -1,0 +1,68 @@
+coreutils
+moreutils
+findutils
+gnu-sed --with-default-names
+bash
+zsh
+bash-completion2
+zsh-completions
+wget --with-iri
+
+vim --with-override-system-vi
+# Reconciliate tmux + vim clipboard and system clipboard
+reattach-to-user-namespace
+
+grep
+screen
+
+homebrew/php/php71 --with-gmp
+python3
+
+sfnt2woff
+sfnt2woff-zopfli
+woff2
+
+aircrack-ng
+bfg
+binutils
+binwalk
+cifer
+dex2jar
+dns2tcp
+fcrackzip
+foremost
+hashpump
+hydra
+john
+knock
+netpbm
+nmap
+pngcheck
+socat
+sqlmap
+tcpflow
+tcpreplay
+tcptrace
+xpdf
+xz
+
+ack
+blueutil
+dark-mode
+git
+git-lfs
+gpg
+imagemagick --with-webp
+gnuplot
+jq
+lynx
+p7zip
+pigz
+pv
+rename
+speedtest_cli
+ssh-copy-id
+testssl
+tree
+vbindiff
+webkit2png

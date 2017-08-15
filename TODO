@@ -1,0 +1,29 @@
+# Create standalone files for packages:
+	brew
+	brew cask
+	pip
+	...
+
+# Create binaries to automaticaly update package list
+
+# Put post configuration in a separate file
+	Download vim packages
+	install vim packages dependencies: .vim/bundles/YouCompleteMe/install.py --clang-completer
+	Set correct shell
+	Set OSX and apps settings
+
+
+# Custom
+
+Customize iterm to be titlebar less
+Delete "confirm quit multiple windows"
+Enable unlimited scrollback in iTerm
+
+
+# Brew packages
+tmux
+
+# Casks
+
+-> Slack
+-> Powerline fonts
